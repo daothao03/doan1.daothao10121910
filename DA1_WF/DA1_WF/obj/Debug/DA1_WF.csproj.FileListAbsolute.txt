@@ -1,0 +1,13 @@
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\bin\Debug\DA1_WF.exe.config
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\bin\Debug\DA1_WF.exe
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\bin\Debug\DA1_WF.pdb
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\bin\Debug\Guna.UI2.dll
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\obj\Debug\DA1_WF.csproj.AssemblyReference.cache
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\obj\Debug\DA1_WF.csproj.SuggestedBindingRedirects.cache
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\obj\Debug\DA1_WF.Properties.Resources.resources
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\obj\Debug\DA1_WF.csproj.GenerateResource.cache
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\obj\Debug\DA1_WF.csproj.CoreCompileInputs.cache
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\obj\Debug\DA1_WF.csproj.CopyComplete
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\obj\Debug\DA1_WF.exe
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\obj\Debug\DA1_WF.pdb
+E:\Đồ án 1_Winform\DA1_WF\DA1_WF\obj\Debug\DA1_WF.frmLogin.resources

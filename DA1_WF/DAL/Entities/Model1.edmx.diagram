@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4ab54587a1ac452d9b8088da0c864199" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="qlmpDA1Model.ChucVu" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlmpDA1Model.hdn" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlmpDA1Model.hoadonban" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlmpDA1Model.khachhang" Width="1.5" PointX="6" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlmpDA1Model.ncc" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlmpDA1Model.NhanVien" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlmpDA1Model.sanpham" Width="1.5" PointX="8.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlmpDA1Model.chitiethdb" Width="1.5" PointX="11.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qlmpDA1Model.chitiethdn" Width="1.5" PointX="10.5" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="qlmpDA1Model.FK__NhanVien__maCV__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="qlmpDA1Model.FK__chitiethd__mahdn__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="qlmpDA1Model.FK__hdn__mancc__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="qlmpDA1Model.FK__hdn__manv__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="qlmpDA1Model.FK__chitiethd__mahdb__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="qlmpDA1Model.FK__hoadonban__maKH__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="qlmpDA1Model.FK__hoadonban__maNV__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="qlmpDA1Model.FK__chitiethdb__maSP__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="qlmpDA1Model.FK__chitiethdn__maSP__4BAC3F29" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

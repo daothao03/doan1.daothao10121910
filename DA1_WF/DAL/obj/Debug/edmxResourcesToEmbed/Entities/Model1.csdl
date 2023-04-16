@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qlmpDA1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChucVu">
+    <Key>
+      <PropertyRef Name="maCV" />
+    </Key>
+    <Property Name="maCV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tenCV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mota" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NhanViens" Relationship="Self.FK__NhanVien__maCV__38996AB5" FromRole="ChucVu" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="hdn">
+    <Key>
+      <PropertyRef Name="mahdn" />
+    </Key>
+    <Property Name="mahdn" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ngayNhap" Type="DateTime" Precision="0" />
+    <Property Name="manv" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mancc" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="chitiethdns" Relationship="Self.FK__chitiethd__mahdn__4AB81AF0" FromRole="hdn" ToRole="chitiethdn" />
+    <NavigationProperty Name="ncc" Relationship="Self.FK__hdn__mancc__48CFD27E" FromRole="hdn" ToRole="ncc" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK__hdn__manv__47DBAE45" FromRole="hdn" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="hoadonban">
+    <Key>
+      <PropertyRef Name="mahdb" />
+    </Key>
+    <Property Name="mahdb" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="maNV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="maKH" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ngayBan" Type="DateTime" Precision="0" />
+    <Property Name="hinhthucthanhtoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="chitiethdbs" Relationship="Self.FK__chitiethd__mahdb__440B1D61" FromRole="hoadonban" ToRole="chitiethdb" />
+    <NavigationProperty Name="khachhang" Relationship="Self.FK__hoadonban__maKH__4222D4EF" FromRole="hoadonban" ToRole="khachhang" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK__hoadonban__maNV__412EB0B6" FromRole="hoadonban" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="khachhang">
+    <Key>
+      <PropertyRef Name="maKH" />
+    </Key>
+    <Property Name="maKH" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hoten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sdt" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="hoadonbans" Relationship="Self.FK__hoadonban__maKH__4222D4EF" FromRole="khachhang" ToRole="hoadonban" />
+  </EntityType>
+  <EntityType Name="ncc">
+    <Key>
+      <PropertyRef Name="mancc" />
+    </Key>
+    <Property Name="mancc" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="diachi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sdt" Type="Int32" />
+    <Property Name="tenncc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="hdns" Relationship="Self.FK__hdn__mancc__48CFD27E" FromRole="ncc" ToRole="hdn" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="maNV" />
+    </Key>
+    <Property Name="maNV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hoten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="namsinh" Type="DateTime" Precision="0" />
+    <Property Name="sdt" Type="Int32" Nullable="false" />
+    <Property Name="maCV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ChucVu" Relationship="Self.FK__NhanVien__maCV__38996AB5" FromRole="NhanVien" ToRole="ChucVu" />
+    <NavigationProperty Name="hdns" Relationship="Self.FK__hdn__manv__47DBAE45" FromRole="NhanVien" ToRole="hdn" />
+    <NavigationProperty Name="hoadonbans" Relationship="Self.FK__hoadonban__maNV__412EB0B6" FromRole="NhanVien" ToRole="hoadonban" />
+    <Property Name="gioitinh" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="pw" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sanpham">
+    <Key>
+      <PropertyRef Name="masp" />
+    </Key>
+    <Property Name="masp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tensp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="xuatxu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="giaban" Type="Int32" />
+    <Property Name="soluong" Type="Int32" />
+    <NavigationProperty Name="chitiethdbs" Relationship="Self.FK__chitiethdb__maSP__44FF419A" FromRole="sanpham" ToRole="chitiethdb" />
+    <NavigationProperty Name="chitiethdns" Relationship="Self.FK__chitiethdn__maSP__4BAC3F29" FromRole="sanpham" ToRole="chitiethdn" />
+    <Property Name="donvitinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="chitiethdb">
+    <Key>
+      <PropertyRef Name="mahdb" />
+      <PropertyRef Name="maSP" />
+    </Key>
+    <Property Name="mahdb" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="maSP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="soluong" Type="Int32" />
+    <NavigationProperty Name="hoadonban" Relationship="Self.FK__chitiethd__mahdb__440B1D61" FromRole="chitiethdb" ToRole="hoadonban" />
+    <NavigationProperty Name="sanpham" Relationship="Self.FK__chitiethdb__maSP__44FF419A" FromRole="chitiethdb" ToRole="sanpham" />
+  </EntityType>
+  <EntityType Name="chitiethdn">
+    <Key>
+      <PropertyRef Name="mahdn" />
+      <PropertyRef Name="maSP" />
+    </Key>
+    <Property Name="mahdn" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="maSP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="gianhap" Type="Int32" />
+    <Property Name="soluong" Type="Int32" />
+    <NavigationProperty Name="hdn" Relationship="Self.FK__chitiethd__mahdn__4AB81AF0" FromRole="chitiethdn" ToRole="hdn" />
+    <NavigationProperty Name="sanpham" Relationship="Self.FK__chitiethdn__maSP__4BAC3F29" FromRole="chitiethdn" ToRole="sanpham" />
+  </EntityType>
+  <Association Name="FK__NhanVien__maCV__38996AB5">
+    <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChucVu">
+        <PropertyRef Name="maCV" />
+      </Principal>
+      <Dependent Role="NhanVien">
+        <PropertyRef Name="maCV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__chitiethd__mahdn__4AB81AF0">
+    <End Role="hdn" Type="Self.hdn" Multiplicity="1" />
+    <End Role="chitiethdn" Type="Self.chitiethdn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hdn">
+        <PropertyRef Name="mahdn" />
+      </Principal>
+      <Dependent Role="chitiethdn">
+        <PropertyRef Name="mahdn" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__hdn__mancc__48CFD27E">
+    <End Role="ncc" Type="Self.ncc" Multiplicity="1" />
+    <End Role="hdn" Type="Self.hdn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ncc">
+        <PropertyRef Name="mancc" />
+      </Principal>
+      <Dependent Role="hdn">
+        <PropertyRef Name="mancc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__hdn__manv__47DBAE45">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="hdn" Type="Self.hdn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="maNV" />
+      </Principal>
+      <Dependent Role="hdn">
+        <PropertyRef Name="manv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__chitiethd__mahdb__440B1D61">
+    <End Role="hoadonban" Type="Self.hoadonban" Multiplicity="1" />
+    <End Role="chitiethdb" Type="Self.chitiethdb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hoadonban">
+        <PropertyRef Name="mahdb" />
+      </Principal>
+      <Dependent Role="chitiethdb">
+        <PropertyRef Name="mahdb" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__hoadonban__maKH__4222D4EF">
+    <End Role="khachhang" Type="Self.khachhang" Multiplicity="1" />
+    <End Role="hoadonban" Type="Self.hoadonban" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="khachhang">
+        <PropertyRef Name="maKH" />
+      </Principal>
+      <Dependent Role="hoadonban">
+        <PropertyRef Name="maKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__hoadonban__maNV__412EB0B6">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="hoadonban" Type="Self.hoadonban" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="maNV" />
+      </Principal>
+      <Dependent Role="hoadonban">
+        <PropertyRef Name="maNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__chitiethdb__maSP__44FF419A">
+    <End Role="sanpham" Type="Self.sanpham" Multiplicity="1" />
+    <End Role="chitiethdb" Type="Self.chitiethdb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanpham">
+        <PropertyRef Name="masp" />
+      </Principal>
+      <Dependent Role="chitiethdb">
+        <PropertyRef Name="maSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__chitiethdn__maSP__4BAC3F29">
+    <End Role="sanpham" Type="Self.sanpham" Multiplicity="1" />
+    <End Role="chitiethdn" Type="Self.chitiethdn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanpham">
+        <PropertyRef Name="masp" />
+      </Principal>
+      <Dependent Role="chitiethdn">
+        <PropertyRef Name="maSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="myphamEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChucVus" EntityType="Self.ChucVu" />
+    <EntitySet Name="hdns" EntityType="Self.hdn" />
+    <EntitySet Name="hoadonbans" EntityType="Self.hoadonban" />
+    <EntitySet Name="khachhangs" EntityType="Self.khachhang" />
+    <EntitySet Name="nccs" EntityType="Self.ncc" />
+    <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+    <EntitySet Name="sanphams" EntityType="Self.sanpham" />
+    <EntitySet Name="chitiethdbs" EntityType="Self.chitiethdb" />
+    <EntitySet Name="chitiethdns" EntityType="Self.chitiethdn" />
+    <AssociationSet Name="FK__NhanVien__maCV__38996AB5" Association="Self.FK__NhanVien__maCV__38996AB5">
+      <End Role="ChucVu" EntitySet="ChucVus" />
+      <End Role="NhanVien" EntitySet="NhanViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK__chitiethd__mahdn__4AB81AF0" Association="Self.FK__chitiethd__mahdn__4AB81AF0">
+      <End Role="hdn" EntitySet="hdns" />
+      <End Role="chitiethdn" EntitySet="chitiethdns" />
+    </AssociationSet>
+    <AssociationSet Name="FK__hdn__mancc__48CFD27E" Association="Self.FK__hdn__mancc__48CFD27E">
+      <End Role="ncc" EntitySet="nccs" />
+      <End Role="hdn" EntitySet="hdns" />
+    </AssociationSet>
+    <AssociationSet Name="FK__hdn__manv__47DBAE45" Association="Self.FK__hdn__manv__47DBAE45">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="hdn" EntitySet="hdns" />
+    </AssociationSet>
+    <AssociationSet Name="FK__chitiethd__mahdb__440B1D61" Association="Self.FK__chitiethd__mahdb__440B1D61">
+      <End Role="hoadonban" EntitySet="hoadonbans" />
+      <End Role="chitiethdb" EntitySet="chitiethdbs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__hoadonban__maKH__4222D4EF" Association="Self.FK__hoadonban__maKH__4222D4EF">
+      <End Role="khachhang" EntitySet="khachhangs" />
+      <End Role="hoadonban" EntitySet="hoadonbans" />
+    </AssociationSet>
+    <AssociationSet Name="FK__hoadonban__maNV__412EB0B6" Association="Self.FK__hoadonban__maNV__412EB0B6">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="hoadonban" EntitySet="hoadonbans" />
+    </AssociationSet>
+    <AssociationSet Name="FK__chitiethdb__maSP__44FF419A" Association="Self.FK__chitiethdb__maSP__44FF419A">
+      <End Role="sanpham" EntitySet="sanphams" />
+      <End Role="chitiethdb" EntitySet="chitiethdbs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__chitiethdn__maSP__4BAC3F29" Association="Self.FK__chitiethdn__maSP__4BAC3F29">
+      <End Role="sanpham" EntitySet="sanphams" />
+      <End Role="chitiethdn" EntitySet="chitiethdns" />
+    </AssociationSet>
+    <FunctionImport Name="SP_SearchKH" ReturnType="Collection(qlmpDA1Model.SP_SearchKH_Result)">
+      <Parameter Name="sdt" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_SearchNCC" ReturnType="Collection(qlmpDA1Model.SP_SearchNCC_Result)">
+      <Parameter Name="tenncc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_SearchNV" ReturnType="Collection(qlmpDA1Model.SP_SearchNV_Result)">
+      <Parameter Name="sdt" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_SearchSP" ReturnType="Collection(qlmpDA1Model.SP_SearchSP_Result)">
+      <Parameter Name="tensp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetHoaDonBan" ReturnType="Collection(qlmpDA1Model.GetHoaDonBan_Result)" />
+    <FunctionImport Name="SP_SearchHDB" ReturnType="Collection(qlmpDA1Model.SP_SearchHDB_Result)">
+      <Parameter Name="tungay" Mode="In" Type="DateTime" />
+      <Parameter Name="denngay" Mode="In" Type="DateTime" />
+      <Parameter Name="sdt" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SearchHDB" ReturnType="Collection(qlmpDA1Model.SearchHDB_Result)">
+      <Parameter Name="tungay" Mode="In" Type="DateTime" />
+      <Parameter Name="denngay" Mode="In" Type="DateTime" />
+      <Parameter Name="sdt" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SearchHDN" ReturnType="Collection(qlmpDA1Model.SearchHDN_Result)">
+      <Parameter Name="tungay" Mode="In" Type="DateTime" />
+      <Parameter Name="denngay" Mode="In" Type="DateTime" />
+      <Parameter Name="tenncc" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SP_SearchKH_Result">
+    <Property Type="String" Name="maKH" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="hoten" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="sdt" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SearchNCC_Result">
+    <Property Type="String" Name="mancc" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="diachi" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="sdt" Nullable="true" />
+    <Property Type="String" Name="tenncc" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_SearchNV_Result">
+    <Property Type="String" Name="maNV" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="hoten" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="namsinh" Nullable="true" />
+    <Property Type="Int32" Name="sdt" Nullable="false" />
+    <Property Type="String" Name="maCV" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="gioitinh" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="pw" Nullable="true" MaxLength="4" />
+  </ComplexType>
+  <ComplexType Name="SP_SearchSP_Result">
+    <Property Type="String" Name="masp" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="tensp" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="xuatxu" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="giaban" Nullable="true" />
+    <Property Type="Int32" Name="soluong" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetHoaDonBan_Result">
+    <Property Type="String" Name="mahdb" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="hoten" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="hoten1" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="ngayBan" Nullable="true" />
+    <Property Type="String" Name="hinhthucthanhtoan" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_SearchHDB_Result">
+    <Property Type="String" Name="mahdb" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="hoten" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="hoten1" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="ngayBan" Nullable="true" />
+    <Property Type="String" Name="hinhthucthanhtoan" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SearchHDB_Result">
+    <Property Type="String" Name="mahdb" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="maNV" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="maKH" Nullable="false" MaxLength="5" />
+    <Property Type="DateTime" Name="ngayBan" Nullable="true" />
+    <Property Type="String" Name="hinhthucthanhtoan" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SearchHDN_Result">
+    <Property Type="String" Name="mahdn" Nullable="false" MaxLength="5" />
+    <Property Type="DateTime" Name="ngayNhap" Nullable="true" />
+    <Property Type="String" Name="manv" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="mancc" Nullable="false" MaxLength="5" />
+  </ComplexType>
+</Schema>

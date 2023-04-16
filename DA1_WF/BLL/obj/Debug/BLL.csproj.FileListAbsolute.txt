@@ -1,0 +1,16 @@
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\BLL.dll
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\BLL.pdb
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\DAL.dll
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\EntityFramework.dll
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\DAL.pdb
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\DAL.dll.config
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\EntityFramework.xml
+E:\Đồ án 1_Winform\DA1_WF\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\Đồ án 1_Winform\DA1_WF\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\Đồ án 1_Winform\DA1_WF\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\Đồ án 1_Winform\DA1_WF\BLL\obj\Debug\BLL.dll
+E:\Đồ án 1_Winform\DA1_WF\BLL\obj\Debug\BLL.pdb
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\BLL.dll.config
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Đồ án 1_Winform\DA1_WF\BLL\bin\Debug\Microsoft.SqlServer.Types.dll

@@ -1,0 +1,13 @@
+E:\Đồ án 1_Winform\DA1_WF\DAL\bin\Debug\DAL.dll.config
+E:\Đồ án 1_Winform\DA1_WF\DAL\bin\Debug\DAL.dll
+E:\Đồ án 1_Winform\DA1_WF\DAL\bin\Debug\DAL.pdb
+E:\Đồ án 1_Winform\DA1_WF\DAL\bin\Debug\EntityFramework.dll
+E:\Đồ án 1_Winform\DA1_WF\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Đồ án 1_Winform\DA1_WF\DAL\bin\Debug\EntityFramework.xml
+E:\Đồ án 1_Winform\DA1_WF\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Đồ án 1_Winform\DA1_WF\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\Đồ án 1_Winform\DA1_WF\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Đồ án 1_Winform\DA1_WF\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\Đồ án 1_Winform\DA1_WF\DAL\obj\Debug\DAL.dll
+E:\Đồ án 1_Winform\DA1_WF\DAL\obj\Debug\DAL.pdb
+E:\Đồ án 1_Winform\DA1_WF\DAL\bin\Debug\Microsoft.SqlServer.Types.dll
